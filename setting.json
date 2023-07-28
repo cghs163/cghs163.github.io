@@ -1,0 +1,46 @@
+{
+    "title": "我的主页",
+    "description": "主页",
+    "keywords": "个人主页",
+    "author": "no",
+    "logo_img": "./img/icon/logo.png",
+    "logo_text_1": "cghs",
+    "logo_text_2": "163",
+    "github": "no",
+    "qq": "3298290688",
+    "email": "cghs163@163.com",
+    "bilibili": "bili_48791834868",
+    "telegram": "bottom_user",
+    "link_1": [
+        "https://cllovu.github.io/blog/blog_1/",
+        "fa-solid fa-blog",
+        "博客"
+    ],
+    "link_2": [
+        "",
+        "fa-solid fa-cloud",
+        "网盘"
+    ],
+    "link_3": [
+        "https://cllovu.github.io/blog/blog_1/",
+        "fa-solid fa-music",
+        "音乐"
+    ],
+    "link_4": [
+        "https://cllovu.github.io/blog/blog_1/",
+        "fa-solid fa-compass",
+        "起始页"
+    ],
+    "link_5": [
+        "",
+        "fa-solid fa-book-bookmark",
+        "网址集"
+    ],
+    "link_6": [
+        "",
+        "fa-solid fa-flask",
+        "实验室"
+    ],
+    "Copyright_text": "cghs",
+    "beian": "no"
+}
