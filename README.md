@@ -39,12 +39,38 @@ npm install
 
 若自定义域名失效，在 Pages 设置中确认 Custom domain 仍为 `cghs.eu.org`，并按需开启 Enforce HTTPS。
 
-## 常用配置
+## 本地快速改外观 / 内容
 
-- 站点信息：`_config.yml`（标题、作者、网址等）
-- 主题外观：`_config.fluid.yml`（导航、横幅、暗色模式、关于页等）
-- 关于页正文：`source/about/index.md`
-- 自定义头图：把图片放到 `source/img/`，再改 `_config.fluid.yml` 里对应的 `banner_img`
+改完后执行 `npm run server` 预览，满意再 `npm run deploy` 上线。
+
+| 想改什么 | 改哪个文件 | 关键字段 / 位置 |
+|----------|------------|----------------|
+| 站点标题、作者、简介 | [`_config.yml`](_config.yml) | `title` / `author` / `description` / `subtitle` |
+| 顶部菜单 | [`_config.fluid.yml`](_config.fluid.yml) | `navbar.menu`（增删一行即可；可用 `name` 自定义显示名） |
+| 导航栏站名 | [`_config.fluid.yml`](_config.fluid.yml) | `navbar.blog_title` |
+| 首页背景图 | 图片放到 `source/img/`，再改 [`_config.fluid.yml`](_config.fluid.yml) | `index.banner_img`（如 `/img/my-bg.jpg`） |
+| 其他页背景 | 同上 | `archive.banner_img` / `about.banner_img` 等 |
+| 首页打字机文案 | [`_config.fluid.yml`](_config.fluid.yml) | `index.slogan.text` |
+| 页脚文字 | [`_config.fluid.yml`](_config.fluid.yml) | `footer.content`（已去掉 Hexo / Fluid 链接） |
+| 关于页介绍 | [`_config.fluid.yml`](_config.fluid.yml) + [`source/about/index.md`](source/about/index.md) | `about.name` / `about.intro`；正文写在 about 的 md 里 |
+| 写文章 | `source/_posts/*.md` | `npm run new -- "标题"` 新建 |
+
+换背景示例：把图片复制为 `source/img/banner.jpg`，然后：
+
+```yaml
+# _config.fluid.yml → index
+banner_img: /img/banner.jpg
+```
+
+菜单示例（加一项「友链」）：
+
+```yaml
+menu:
+  - { key: "home", link: "/", icon: "iconfont icon-home-fill" }
+  - { key: "archive", link: "/archives/", icon: "iconfont icon-archive-fill" }
+  - { key: "about", link: "/about/", icon: "iconfont icon-user-fill" }
+  - { key: "links", name: "友链", link: "/links/", icon: "iconfont icon-link-fill" }
+```
 
 ## 主题文档
 
