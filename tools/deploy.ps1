@@ -1,19 +1,19 @@
-# æäº¤æœ¬åœ°æ›´æ”¹å¹¶æ¨é€åˆ° mainï¼Œè§¦å‘ GitHub Actions å‘å¸ƒ
+# Ìá½»±¾µØ¸ü¸Ä²¢ÍÆËÍµ½ main£¬´¥·¢ GitHub Actions ·¢²¼
 $ErrorActionPreference = "Stop"
 
 $env:Path = "D:\app\nodejs\node-v22;D:\app\git\cmd;D:\app\git\bin;" + $env:Path
 
-# æœ¬æœºæœªé…ç½® git user æ—¶ï¼Œä½¿ç”¨ä¸€æ¬¡æ€§ç¯å¢ƒå˜é‡ï¼ˆä¸æ”¹åŠ¨ git configï¼‰
+# ±¾»úÎ´ÅäÖÃ git user Ê±£¬Ê¹ÓÃÒ»´ÎĞÔ»·¾³±äÁ¿£¨²»¸Ä¶¯ git config£©
 if (-not (git config user.email)) {
-  $env:GIT_AUTHOR_NAME = "æ¤¿"
+  $env:GIT_AUTHOR_NAME = "´»"
   $env:GIT_AUTHOR_EMAIL = "cghs163@users.noreply.github.com"
-  $env:GIT_COMMITTER_NAME = "æ¤¿"
+  $env:GIT_COMMITTER_NAME = "´»"
   $env:GIT_COMMITTER_EMAIL = "cghs163@users.noreply.github.com"
 }
 
 $status = git status --porcelain
 if (-not $status) {
-  Write-Host "æ²¡æœ‰éœ€è¦æäº¤çš„æ›´æ”¹ã€‚è‹¥ä»…æƒ³è§¦å‘é‡æ–°éƒ¨ç½²ï¼Œå¯å…ˆæ”¹ä¸€ä¸ªæ–‡ä»¶å†è¿è¡Œã€‚"
+  Write-Host "Ã»ÓĞĞèÒªÌá½»µÄ¸ü¸Ä¡£Èô½öÏë´¥·¢ÖØĞÂ²¿Êğ£¬¿ÉÏÈ¸ÄÒ»¸öÎÄ¼şÔÙÔËĞĞ¡£"
   exit 0
 }
 
@@ -22,4 +22,4 @@ $message = "publish: $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')"
 git commit -m $message
 git push -u origin HEAD:main
 
-Write-Host "å·²æ¨é€åˆ° mainã€‚è¯·åˆ° GitHub Actions æŸ¥çœ‹æ„å»ºä¸ Pages éƒ¨ç½²çŠ¶æ€ã€‚"
+Write-Host "ÒÑÍÆËÍµ½ main¡£Çëµ½ GitHub Actions ²é¿´¹¹½¨Óë Pages ²¿Êğ×´Ì¬¡£"
