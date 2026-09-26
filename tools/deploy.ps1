@@ -3,6 +3,14 @@ $ErrorActionPreference = "Stop"
 
 $env:Path = "D:\app\nodejs\node-v22;D:\app\git\cmd;D:\app\git\bin;" + $env:Path
 
+# 本机未配置 git user 时，使用一次性环境变量（不改动 git config）
+if (-not (git config user.email)) {
+  $env:GIT_AUTHOR_NAME = "椿"
+  $env:GIT_AUTHOR_EMAIL = "cghs163@users.noreply.github.com"
+  $env:GIT_COMMITTER_NAME = "椿"
+  $env:GIT_COMMITTER_EMAIL = "cghs163@users.noreply.github.com"
+}
+
 $status = git status --porcelain
 if (-not $status) {
   Write-Host "没有需要提交的更改。若仅想触发重新部署，可先改一个文件再运行。"
