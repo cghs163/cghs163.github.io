@@ -30,10 +30,14 @@ npm install
 
 ## 上线说明
 
-1. 在 GitHub 创建空仓库 `cghs163.github.io`（不要勾选自动添加 README）
+1. 仓库：https://github.com/cghs163/cghs163.github.io（旧静态站已备份到 `legacy-site` 分支）
 2. 本仓库已配置 `.github/workflows/pages.yml`
-3. 首次推送后，打开仓库 **Settings → Pages → Source**，选择 **GitHub Actions**
-4. 等待 Actions 成功后访问 https://cghs163.github.io
+3. 打开仓库 **Settings → Pages → Source**，选择 **GitHub Actions**（若尚未选择）
+4. 等待 Actions 成功后访问：
+   - https://cghs163.github.io
+   - 自定义域名：https://cghs.eu.org（`source/CNAME` 已保留）
+
+若自定义域名失效，在 Pages 设置中确认 Custom domain 仍为 `cghs.eu.org`，并按需开启 Enforce HTTPS。
 
 ## 常用配置
 
