@@ -3,10 +3,12 @@
   "newFileLocation": "folder",
   "newFileFolderPath": "source/_posts",
   "attachmentFolderPath": "source/img/library",
-  "showLineNumber": true,
+  "showLineNumber": false,
   "strictLineBreaks": false,
   "useMarkdownLinks": false,
   "showUnsupportedFiles": true,
   "userRelativePath": true,
-  "spellcheck": false
+  "spellcheck": false,
+  "readableLineLength": false,
+  "foldIndent": true
 }

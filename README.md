@@ -4,30 +4,30 @@
 
 ## 推荐：用 Obsidian 写文章（插图最省事）
 
-本仓库根目录已配置为 Obsidian 仓库（`.obsidian/`）。
+Obsidian **只打开写作目录** `source/`（不是整个代码仓库），侧边栏主要是文章和图片，看不到 `node_modules`、配置文件等。
 
 | 本地（Obsidian） | 线上（Hexo） |
 |------------------|--------------|
-| 文章：`source/_posts/*.md` | 同样路径发布为博文 |
-| 图片库：`source/img/library/` | 访问路径 `/img/library/文件名` |
+| 文章：`_posts/*.md` | `source/_posts` 发布为博文 |
+| 图片库：`img/library/` | `/img/library/文件名` |
 | 写法：`![[照片.png]]` | 自动转为网站图片 |
 | Callout：`> [!tip]` | 上线保留提示框样式 |
 
 ### 第一次使用
 
-1. Obsidian →「打开本地仓库」→ 选 `E:\download_doc\blog`  
+1. 先在 Obsidian 里**关掉**旧的 `blog` 根目录仓库（如果还开着）
+2. 「打开本地仓库」→ 选 `E:\download_doc\blog\source`  
    或执行：`npm run obsidian`
-2. 设置 → 核心插件 → 打开 **模板**，模板文件夹应为 `source/_templates`
-3. 新建笔记时可用模板 `hexo-文章`（含 Front Matter）
+3. 核心插件打开 **模板**，模板文件夹：`_templates`
+4. 新建笔记可用模板 `hexo-文章`
+
+侧边栏应主要看到：`_posts`、`img`、`_templates`、`about`（`css` 等已排除）。
 
 ### 日常流程
 
-1. 在 Obsidian 新建/编辑 `source/_posts` 下文章（务必保留开头的 `---` Front Matter）
-2. 直接粘贴图片 → 自动进 `source/img/library/`，正文出现 `![[xxx.png]]`
-3. 本地预览：`npm run server` → http://localhost:4000
-4. 上线：`npm run deploy`
-
-> 说明：网页整体皮肤仍是博客主题（像素风）；**正文里的图片路径、Callout、标题层级**会与 Obsidian 写作内容保持一致。Obsidian 软件自身的皮肤主题不会原样搬到网站上。
+1. 在 `_posts` 写文章（保留开头 `---` Front Matter）
+2. 粘贴图片 → `img/library/`，正文用 `![[xxx.png]]`（不要用 `/img/...`）
+3. `npm run server` 预览 → `npm run deploy` 上线
 
 ## 日常发文
 
