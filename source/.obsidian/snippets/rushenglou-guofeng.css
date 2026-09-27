@@ -31,10 +31,11 @@
   --interactive-accent: #2f5f55 !important;
   --interactive-accent-hover: #244a43 !important;
 
-  --titlebar-background: #1f2435 !important;
-  --titlebar-background-focused: #1f2435 !important;
-  --titlebar-text-color: #ffffff !important;
-  --titlebar-text-color-focused: #ffffff !important;
+  /* 顶栏改为浅底深字：文章标签若嵌在标题栏也能看清 */
+  --titlebar-background: #f3efe6 !important;
+  --titlebar-background-focused: #efe9dc !important;
+  --titlebar-text-color-focused: #111111 !important;
+  --titlebar-text-color: #111111 !important;
 
   --ribbon-background: #1f2435 !important;
   --ribbon-background-collapsed: #1f2435 !important;
@@ -243,13 +244,22 @@ body,
   -webkit-text-fill-color: #000000 !important;
 }
 
-/* 顶栏 / 状态栏：强制白字（修复左上角标题看不见） */
+/*
+ * 顶栏：浅底 + 深字
+ * 新版 Obsidian 常把「文章标签/仓库名」放进标题栏，深底深字会完全看不见
+ */
 .titlebar,
 .titlebar-inner,
 .workspace .titlebar,
-body > .titlebar {
-  background: #1f2435 !important;
-  color: #ffffff !important;
+body > .titlebar,
+.is-hidden-frameless .titlebar,
+.is-frameless .titlebar,
+.titlebar-button-container,
+.titlebar-button-container.mod-left,
+.titlebar-button-container.mod-right {
+  background: #f3efe6 !important;
+  color: #111111 !important;
+  border-bottom: 1px solid #c9b896 !important;
 }
 
 .titlebar *,
@@ -259,14 +269,38 @@ body > .titlebar {
 .titlebar .clickable-icon,
 .titlebar .clickable-icon .svg-icon,
 .titlebar-inner,
-.titlebar-inner * {
-  color: #ffffff !important;
-  fill: #ffffff !important;
-  stroke: #ffffff !important;
+.titlebar-inner *,
+.titlebar .workspace-tab-header,
+.titlebar .workspace-tab-header-inner-title,
+.titlebar .workspace-tab-header *,
+.titlebar-button-container.mod-left *,
+.titlebar-button-container.mod-right *,
+.titlebar .workspace-drawer-vault-switcher,
+.titlebar .workspace-drawer-vault-switcher * {
+  color: #111111 !important;
+  fill: #111111 !important;
+  stroke: #111111 !important;
   opacity: 1 !important;
+  -webkit-text-fill-color: #111111 !important;
+}
+
+/* 标题栏里的当前文章标签 */
+.titlebar .workspace-tab-header.is-active,
+.titlebar .workspace-tab-header.is-active * {
+  background: #fffaf0 !important;
+  color: #000000 !important;
+  -webkit-text-fill-color: #000000 !important;
+  font-weight: 700 !important;
+}
+
+/* 右上角窗口按钮保持可辨认 */
+.titlebar-button.mod-close:hover {
+  background: #c75050 !important;
+  color: #ffffff !important;
   -webkit-text-fill-color: #ffffff !important;
 }
 
+/* 底栏仍用深底白字（与正文区分） */
 .status-bar,
 .status-bar-item,
 .status-bar * {
@@ -274,22 +308,6 @@ body > .titlebar {
   color: #ffffff !important;
   fill: #ffffff !important;
   opacity: 1 !important;
-  -webkit-text-fill-color: #ffffff !important;
-}
-
-/* Windows 自定义标题栏 / 保险写法 */
-.is-hidden-frameless .titlebar,
-.is-frameless .titlebar,
-.titlebar-button-container,
-.titlebar-button-container.mod-left,
-.titlebar-button-container.mod-right {
-  background: #1f2435 !important;
-  color: #ffffff !important;
-}
-
-.titlebar-button-container.mod-left *,
-.titlebar-button-container.mod-right * {
-  color: #ffffff !important;
   -webkit-text-fill-color: #ffffff !important;
 }
 
