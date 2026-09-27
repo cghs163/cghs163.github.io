@@ -140,79 +140,79 @@ dark_mode:
 color:
   # body 背景色
   # Color of body background
-  body_bg_color: "#7ec8e3"
+  body_bg_color: "#dfe8f0"
   # 暗色模式下的 body 背景色，下同
   # Color in dark mode, the same below
-  body_bg_color_dark: "#1b2540"
+  body_bg_color_dark: "#12141c"
 
   # 顶部菜单背景色
   # Color of navigation bar background
-  navbar_bg_color: "#8b5a2b"
-  navbar_bg_color_dark: "#5c3a1a"
+  navbar_bg_color: "#2c3042"
+  navbar_bg_color_dark: "#1c1e2a"
 
   # 顶部菜单字体色
   # Color of navigation bar text
-  navbar_text_color: "#fff6d6"
-  navbar_text_color_dark: "#f6d365"
+  navbar_text_color: "#fcf9f3"
+  navbar_text_color_dark: "#e6d3a3"
 
   # 副标题字体色
   # Color of subtitle text
-  subtitle_color: "#fff6d6"
-  subtitle_color_dark: "#f6d365"
+  subtitle_color: "#fcf9f3"
+  subtitle_color_dark: "#e6d3a3"
 
   # 全局字体色
   # Color of global text
-  text_color: "#3b2a1a"
-  text_color_dark: "#f3e6c8"
+  text_color: "#2c2a32"
+  text_color_dark: "#efe9dc"
 
   # 全局次级字体色（摘要、简介等位置）
   # Color of global secondary text (excerpt, introduction, etc.)
-  sec_text_color: "#6b4f32"
-  sec_text_color_dark: "#cbb896"
+  sec_text_color: "#5c5666"
+  sec_text_color_dark: "#b8b0c0"
 
   # 主面板背景色
   # Color of main board
-  board_color: "#fff6d6"
-  board_color_dark: "#2a241c"
+  board_color: "#fcf9f3"
+  board_color_dark: "#1c1e2a"
 
   # 文章正文字体色
   # Color of post text
-  post_text_color: "#3b2a1a"
-  post_text_color_dark: "#f3e6c8"
+  post_text_color: "#2c2a32"
+  post_text_color_dark: "#efe9dc"
 
   # 文章正文字体色（h1 h2 h3...）
   # Color of Article heading (h1 h2 h3...)
-  post_heading_color: "#4a2c0a"
-  post_heading_color_dark: "#f6d365"
+  post_heading_color: "#2c2a32"
+  post_heading_color_dark: "#e6d3a3"
 
   # 文章超链接字体色
   # Color of post link
-  post_link_color: "#2f7d32"
-  post_link_color_dark: "#8fd46a"
+  post_link_color: "#3f5f58"
+  post_link_color_dark: "#9fbfb4"
 
   # 超链接悬浮时字体色
   # Color of link when hovering
-  link_hover_color: "#d35400"
-  link_hover_color_dark: "#f6d365"
+  link_hover_color: "#6b6a8d"
+  link_hover_color_dark: "#e6d3a3"
 
   # 超链接悬浮背景色
   # Color of link background when hovering
-  link_hover_bg_color: "#ffe08a"
-  link_hover_bg_color_dark: "#3b2f1f"
+  link_hover_bg_color: "#eef3f7"
+  link_hover_bg_color_dark: "#242038"
 
   # 分隔线和表格边线的颜色
   # Color of horizontal rule and table border
-  line_color: "#d2b48c"
-  line_color_dark: "#6b4f32"
+  line_color: "#e6d3a3"
+  line_color_dark: "#3a3f55"
 
   # 滚动条颜色
   # Color of scrollbar
-  scrollbar_color: "#c68642"
-  scrollbar_color_dark: "#8b5a2b"
+  scrollbar_color: "#c2a36b"
+  scrollbar_color_dark: "#6b6a8d"
   # 滚动条悬浮颜色
   # Color of scrollbar when hovering
-  scrollbar_hover_color: "#8b5a2b"
-  scrollbar_hover_color_dark: "#f6d365"
+  scrollbar_hover_color: "#6f8f86"
+  scrollbar_hover_color_dark: "#e6d3a3"
 
   # 按钮背景色
   # Color of button
@@ -220,8 +220,8 @@ color:
   button_bg_color_dark: "transparent"
   # 按钮悬浮背景色
   # Color of button when hovering
-  button_hover_bg_color: "#ffe08a"
-  button_hover_bg_color_dark: "#3b2f1f"
+  button_hover_bg_color: "#eef3f7"
+  button_hover_bg_color_dark: "#242038"
 
 # 主题字体配置
 # Font
@@ -238,7 +238,7 @@ custom_js:
 # 指定自定义 .css 文件路径，用法和 custom_js 相同
 # The usage is the same as custom_js
 custom_css:
-  - /css/stardew-pixel.css
+  - /css/guofeng-elegant.css
   - /css/obsidian-content.css
 
 # 网页访问统计
@@ -466,7 +466,7 @@ footer:
   # 页脚第一行文字的 HTML，建议保留 Fluid 的链接，用于向更多人推广本主题
   # HTML of the first line of the footer, it is recommended to keep the Fluid link to promote this theme to more people
   content: '
-    <span>如升楼 · 椿 · 像素田园</span>
+    <span>如升楼 · 椿</span>
   '
 
   # 展示网站的 PV、UV 统计数
@@ -500,7 +500,7 @@ footer:
 index:
   # 首页 Banner 头图，可以是相对路径或绝对路径，以下相同
   # Path of Banner image, can be a relative path or an absolute path, the same on other pages
-  banner_img: /img/pixel-banner-hero.png
+  banner_img: /img/guofeng-banner-hero.png
 
   # 头图高度，屏幕百分比
   # Height ratio of banner image
@@ -510,7 +510,7 @@ index:
   # 头图黑色蒙版的不透明度，available: 0 - 1.0，1 是完全不透明
   # Opacity of the banner mask, 1.0 is completely opaque
   # Available: 0 - 1.0
-  banner_mask_alpha: 0.28
+  banner_mask_alpha: 0.22
 
   # 首页副标题的独立设置
   # Independent config of home page subtitle
@@ -520,9 +520,9 @@ index:
     # 为空则按 hexo config.subtitle 显示，支持列表格式来实现随机选择一行文字显示
     # If empty, text based on `subtitle` in hexo config, support list format to random selection of a row for display
     text:
-      - "欢迎来到鹈鹕镇的像素时光"
-      - "播种、钓鱼、挖矿，慢慢过一天"
-      - "如升楼里，也有一亩小田"
+      - "云阙之上，字如升楼"
+      - "清风入卷，星河落笔"
+      - "天宫远望，一念成章"
 
     # 通过 API 接口作为首页副标题的内容，必须返回的是 JSON 格式，如果请求失败则按 text 字段显示，该功能必须先开启 typing 打字机功能
     # Subtitle of the homepage through the API, must be returned a JSON. If the request fails, it will be displayed in `text` value. This feature must first enable the typing animation
@@ -575,9 +575,9 @@ index:
 # Post Page
 #---------------------------
 post:
-  banner_img: /img/pixel-bg-night-premium.png
+  banner_img: /img/guofeng-catastrophe-night.png
   banner_img_height: 70
-  banner_mask_alpha: 0.3
+  banner_mask_alpha: 0.28
 
   # 文章在首页的默认封面图，当没有指定 index_img 时会使用该图片，若两者都为空则不显示任何图片
   # Path of the default post cover when `index_img` is not set. If both are empty, no image will be displayed
@@ -947,7 +947,7 @@ discuss:
 # Archive Page
 #---------------------------
 archive:
-  banner_img: /img/pixel-bg-night-premium.png
+  banner_img: /img/guofeng-catastrophe-night.png
   banner_img_height: 60
   banner_mask_alpha: 0.3
 
@@ -958,7 +958,7 @@ archive:
 #---------------------------
 category:
   enable: true
-  banner_img: /img/pixel-bg-night-premium.png
+  banner_img: /img/guofeng-catastrophe-night.png
   banner_img_height: 60
   banner_mask_alpha: 0.3
 
@@ -987,7 +987,7 @@ category:
 #---------------------------
 tag:
   enable: true
-  banner_img: /img/pixel-bg-night-premium.png
+  banner_img: /img/guofeng-catastrophe-night.png
   banner_img_height: 80
   banner_mask_alpha: 0.3
   tagcloud:
@@ -1004,12 +1004,12 @@ tag:
 #---------------------------
 about:
   enable: true
-  banner_img: /img/pixel-bg-night-premium.png
+  banner_img: /img/guofeng-catastrophe-night.png
   banner_img_height: 60
   banner_mask_alpha: 0.3
   avatar: /img/favicon.png
   name: "椿"
-  intro: "如升楼主人 · 像素田园与日常随笔"
+  intro: "如升楼主人 · 清风入卷，星河落笔"
   # 更多图标可从 https://hexo.fluid-dev.com/docs/icon/ 查找，`class` 代表图标的 css class，添加 `qrcode` 后，图标不再是链接而是悬浮二维码
   # More icons can be found from https://hexo.fluid-dev.com/docs/en/icon/  `class` is the css class of the icon. If adding `qrcode`, the icon is no longer a link, but a hovering QR code
   icons:
@@ -1024,7 +1024,7 @@ about:
 # Custom Page through `hexo new page`
 #---------------------------
 page:
-  banner_img: /img/pixel-bg-night-premium.png
+  banner_img: /img/guofeng-catastrophe-night.png
   banner_img_height: 60
   banner_mask_alpha: 0.3
 
@@ -1035,7 +1035,7 @@ page:
 #---------------------------
 page404:
   enable: true
-  banner_img: /img/pixel-bg-night-premium.png
+  banner_img: /img/guofeng-catastrophe-night.png
   banner_img_height: 85
   banner_mask_alpha: 0.3
   # 重定向到首页的延迟(毫秒)
@@ -1049,7 +1049,7 @@ page404:
 #---------------------------
 links:
   enable: true
-  banner_img: /img/pixel-bg-night-premium.png
+  banner_img: /img/guofeng-catastrophe-night.png
   banner_img_height: 60
   banner_mask_alpha: 0.3
   # 友链的成员项
@@ -1154,3 +1154,4 @@ static_prefix:
   hint: https://lib.baomitu.com/hint.css/2.7.0/
 
   moment: https://lib.baomitu.com/moment.js/2.29.4/
+

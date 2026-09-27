@@ -1,0 +1,266 @@
+/* 如升楼 · 清雅玄幻国风（卡通恢弘，克制不花哨） */
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=ZCOOL+XiaoWei&display=swap");
+
+:root {
+  --gf-ink: #2c2a32;
+  --gf-ink-soft: #5c5666;
+  --gf-jade: #6f8f86;
+  --gf-jade-deep: #3f5f58;
+  --gf-gold: #c2a36b;
+  --gf-gold-soft: #e6d3a3;
+  --gf-paper: rgba(252, 249, 243, 0.92);
+  --gf-mist: #eef3f7;
+  --gf-violet: #6b6a8d;
+}
+
+body {
+  background-color: #dfe8f0 !important;
+  background-image:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.28) 0%, rgba(20, 28, 48, 0.18) 100%),
+    url("/img/guofeng-palace-day.png") !important;
+  background-size: cover !important;
+  background-position: center top !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+  font-family: "Noto Serif SC", "ZCOOL XiaoWei", "Songti SC", serif !important;
+}
+
+[data-user-color-scheme="dark"] body,
+html[data-user-color-scheme="dark"] body {
+  background-color: #12141c !important;
+  background-image:
+    linear-gradient(180deg, rgba(10, 12, 24, 0.35) 0%, rgba(10, 12, 24, 0.55) 100%),
+    url("/img/guofeng-catastrophe-night.png") !important;
+  background-size: cover !important;
+  background-position: center top !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+}
+
+/* 导航：清透玉色，不抢戏 */
+.navbar,
+#navbar {
+  background: linear-gradient(180deg, rgba(44, 48, 66, 0.82), rgba(34, 38, 54, 0.9)) !important;
+  border-bottom: 1px solid rgba(194, 163, 107, 0.45) !important;
+  box-shadow: 0 8px 24px rgba(20, 24, 40, 0.18) !important;
+  backdrop-filter: blur(10px);
+  font-family: "ZCOOL XiaoWei", "Noto Serif SC", serif !important;
+}
+
+.navbar .navbar-brand {
+  color: var(--gf-gold-soft) !important;
+  font-size: 1.45rem !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.18em;
+  text-shadow: 0 0 18px rgba(230, 211, 163, 0.35);
+}
+
+.navbar .nav-link,
+#navbar a {
+  font-family: "Noto Serif SC", serif !important;
+  letter-spacing: 0.06em;
+  color: rgba(252, 249, 243, 0.9) !important;
+}
+
+.navbar .nav-link:hover {
+  color: var(--gf-gold-soft) !important;
+}
+
+#banner,
+.banner {
+  box-shadow: inset 0 -50px 70px rgba(20, 24, 40, 0.22);
+}
+
+#banner .banner-text h1,
+#banner .banner-text #subtitle,
+.banner .banner-text {
+  font-family: "ZCOOL XiaoWei", "Noto Serif SC", serif !important;
+  letter-spacing: 0.2em;
+  text-shadow: 0 2px 18px rgba(20, 24, 40, 0.45);
+}
+
+#banner .banner-text #subtitle,
+#subtitle {
+  background: rgba(252, 249, 243, 0.14);
+  border: 1px solid rgba(230, 211, 163, 0.45);
+  border-radius: 999px;
+  padding: 0.4rem 1.2rem;
+  display: inline-block;
+  backdrop-filter: blur(4px);
+}
+
+/* 主面板：宣纸感，留白呼吸 */
+#board,
+.board {
+  background: var(--gf-paper) !important;
+  border: 1px solid rgba(194, 163, 107, 0.35) !important;
+  border-radius: 18px !important;
+  box-shadow:
+    0 18px 50px rgba(30, 36, 56, 0.16),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.35) !important;
+  animation: fadeLift 0.55s ease;
+}
+
+[data-user-color-scheme="dark"] #board,
+[data-user-color-scheme="dark"] .board,
+html[data-user-color-scheme="dark"] #board {
+  background: rgba(28, 30, 42, 0.92) !important;
+  border-color: rgba(194, 163, 107, 0.3) !important;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35) !important;
+}
+
+@keyframes fadeLift {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+a.index-header,
+.index .index-header {
+  font-family: "ZCOOL XiaoWei", "Noto Serif SC", serif !important;
+  color: var(--gf-ink) !important;
+  letter-spacing: 0.08em;
+}
+
+a.index-header:hover {
+  color: var(--gf-jade-deep) !important;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.post-content h1,
+.post-content h2,
+.post-content h3,
+.page-header {
+  font-family: "ZCOOL XiaoWei", "Noto Serif SC", serif !important;
+  color: var(--gf-ink) !important;
+  border-bottom: 1px solid rgba(194, 163, 107, 0.45) !important;
+  letter-spacing: 0.12em;
+  font-weight: 600;
+}
+
+[data-user-color-scheme="dark"] .markdown-body h1,
+[data-user-color-scheme="dark"] .markdown-body h2,
+[data-user-color-scheme="dark"] .markdown-body h3 {
+  color: var(--gf-gold-soft) !important;
+}
+
+.markdown-body img,
+.post-content img,
+.index-img img {
+  border: 1px solid rgba(194, 163, 107, 0.35);
+  border-radius: 12px !important;
+  box-shadow: 0 10px 28px rgba(30, 36, 56, 0.12);
+}
+
+.markdown-body table,
+.post-content table {
+  border: 1px solid rgba(194, 163, 107, 0.35) !important;
+  background: rgba(255, 255, 255, 0.65);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: none;
+}
+
+.markdown-body table th,
+.post-content table th {
+  background: linear-gradient(180deg, #f4ecda, #ebe0c8) !important;
+  color: var(--gf-ink) !important;
+  border: none !important;
+  font-family: "Noto Serif SC", serif !important;
+}
+
+.markdown-body table td,
+.post-content table td {
+  border-color: rgba(194, 163, 107, 0.2) !important;
+}
+
+.markdown-body code,
+.post-content code {
+  background: rgba(238, 243, 247, 0.95) !important;
+  color: #5a3e55 !important;
+  border: 1px solid rgba(194, 163, 107, 0.25);
+  border-radius: 6px !important;
+}
+
+.markdown-body pre,
+.hljs {
+  border: 1px solid rgba(194, 163, 107, 0.28) !important;
+  border-radius: 12px !important;
+  box-shadow: none;
+}
+
+.markdown-body blockquote {
+  border-left: 3px solid var(--gf-jade) !important;
+  background: rgba(111, 143, 134, 0.08);
+  border-radius: 0 10px 10px 0 !important;
+}
+
+.post-tags a,
+.category a,
+.tag-cloud a {
+  border-radius: 999px !important;
+  border: 1px solid rgba(194, 163, 107, 0.4) !important;
+  background: rgba(255, 255, 255, 0.7) !important;
+  color: var(--gf-ink-soft) !important;
+  box-shadow: none;
+  font-family: "Noto Serif SC", serif !important;
+}
+
+.toc,
+.sidebar-toc,
+#toc,
+.toc-body {
+  background: rgba(252, 249, 243, 0.88) !important;
+  border: 1px solid rgba(194, 163, 107, 0.3) !important;
+  border-radius: 14px !important;
+  box-shadow: 0 10px 28px rgba(30, 36, 56, 0.1) !important;
+}
+
+.toc-header {
+  background: linear-gradient(180deg, rgba(107, 106, 141, 0.9), rgba(63, 95, 88, 0.85)) !important;
+  color: #fff !important;
+  border: none !important;
+  border-radius: 12px 12px 0 0 !important;
+  box-shadow: none;
+  font-family: "ZCOOL XiaoWei", serif !important;
+  letter-spacing: 0.2em;
+}
+
+footer,
+#footer {
+  font-family: "ZCOOL XiaoWei", "Noto Serif SC", serif !important;
+  letter-spacing: 0.12em;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+}
+
+#scroll-top-button,
+.scroll-top-button {
+  border-radius: 50% !important;
+  border: 1px solid rgba(194, 163, 107, 0.55) !important;
+  background: rgba(252, 249, 243, 0.92) !important;
+  color: var(--gf-ink) !important;
+  box-shadow: 0 8px 20px rgba(30, 36, 56, 0.18) !important;
+}
+
+@media (max-width: 768px) {
+  body {
+    background-attachment: scroll !important;
+  }
+
+  #board,
+  .board {
+    border-radius: 14px !important;
+  }
+
+  #subtitle {
+    border-radius: 12px;
+  }
+}

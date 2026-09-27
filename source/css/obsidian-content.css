@@ -1,70 +1,61 @@
-/* Obsidian 内容样式对齐：Callout / 维基未解析链接 / 图片 */
+/* 正文 Callout / 图片：清雅国风 */
 
 .markdown-body .callout,
 .post-content .callout {
-  border: 3px solid #8b5a2b;
-  border-left-width: 8px;
-  background: rgba(255, 246, 214, 0.85);
-  box-shadow: 4px 4px 0 rgba(43, 29, 18, 0.18);
-  padding: 0.85rem 1rem;
+  border: 1px solid rgba(194, 163, 107, 0.4);
+  border-left: 4px solid #6f8f86;
+  background: rgba(252, 249, 243, 0.9);
+  box-shadow: 0 8px 22px rgba(30, 36, 56, 0.08);
+  padding: 0.9rem 1.1rem;
   margin: 1.25rem 0;
-  border-radius: 0;
+  border-radius: 12px;
 }
 
 .markdown-body .callout-title,
 .post-content .callout-title {
-  font-family: "Pixelify Sans", "ZCOOL KuaiLe", sans-serif;
-  font-weight: 700;
-  margin-bottom: 0.4rem;
-  color: #3b2a1a;
-}
-
-.markdown-body .callout-content > p:last-child,
-.post-content .callout-content > p:last-child {
-  margin-bottom: 0;
+  font-family: "ZCOOL XiaoWei", "Noto Serif SC", serif;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  margin-bottom: 0.35rem;
+  color: #2c2a32;
 }
 
 .markdown-body .callout-note,
 .markdown-body .callout-info,
 .post-content .callout-note,
 .post-content .callout-info {
-  border-left-color: #3b82f6;
-  background: rgba(219, 234, 254, 0.75);
+  border-left-color: #6b6a8d;
+  background: rgba(238, 243, 247, 0.9);
 }
 
 .markdown-body .callout-tip,
 .markdown-body .callout-hint,
 .post-content .callout-tip,
 .post-content .callout-hint {
-  border-left-color: #16a34a;
-  background: rgba(220, 252, 231, 0.8);
+  border-left-color: #6f8f86;
+  background: rgba(232, 242, 238, 0.9);
 }
 
 .markdown-body .callout-warning,
 .markdown-body .callout-caution,
 .post-content .callout-warning,
 .post-content .callout-caution {
-  border-left-color: #f59e0b;
-  background: rgba(254, 243, 199, 0.85);
+  border-left-color: #c2a36b;
+  background: rgba(250, 244, 230, 0.95);
 }
 
 .markdown-body .callout-danger,
 .markdown-body .callout-error,
 .post-content .callout-danger,
 .post-content .callout-error {
-  border-left-color: #dc2626;
-  background: rgba(254, 226, 226, 0.85);
-}
-
-.markdown-body .callout-quote,
-.post-content .callout-quote {
-  border-left-color: #8b5a2b;
+  border-left-color: #a66d7a;
+  background: rgba(250, 236, 240, 0.95);
 }
 
 .markdown-body .wiki-unresolved,
 .post-content .wiki-unresolved {
-  color: #b45309;
-  border-bottom: 2px dashed #f59e0b;
+  color: #8a6a45;
+  border-bottom: 1px dashed #c2a36b;
 }
 
 .markdown-body img,
@@ -73,7 +64,6 @@
   height: auto;
 }
 
-/* 让文章内图片库路径与 Obsidian 预览更接近：居中、有呼吸感 */
 .markdown-body p > img:only-child,
 .post-content p > img:only-child {
   display: block;

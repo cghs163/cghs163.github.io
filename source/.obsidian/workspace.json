@@ -4,11 +4,39 @@
     "type": "split",
     "children": [
       {
-        "id": "c5b032241e1a86ca",
+        "id": "2b0f6e1e0fc041d4",
         "type": "tabs",
         "children": [
           {
-            "id": "editor-leaf",
+            "id": "4516f8585c599ff2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_templates/hexo-文章.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "hexo-文章"
+            }
+          },
+          {
+            "id": "8ca3ba1e870401ee",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_posts/星露谷物品代码前缀速查.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "星露谷物品代码前缀速查"
+            }
+          },
+          {
+            "id": "3015ca350cfeea42",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -21,7 +49,8 @@
               "title": "思"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -83,7 +112,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 204.6999969482422
   },
   "right": {
     "id": "right",
@@ -188,12 +217,28 @@
       "bases:新建数据库": false
     }
   },
-  "active": "editor-leaf",
+  "active": "8ca3ba1e870401ee",
   "lastOpenFiles": [
-    "_posts/中秋随想.md",
+    "img/guofeng-banner-hero.png",
+    "img/guofeng-catastrophe-night.png",
+    "img/guofeng-palace-day.png",
+    "css/guofeng-elegant.css",
     "_posts/网络安全内网渗透全链路学习指南.md",
-    "_posts/星露谷物品代码前缀速查.md",
     "_templates/hexo-文章.md",
-    "about/index.md"
+    "about/index.md",
+    "_posts/未命名.md",
+    "未命名.md",
+    "_posts/中秋随想.md",
+    "未命名",
+    "_posts/思.md",
+    "img/apple-touch-icon.png",
+    "img/cybersec-intranet-learning.png",
+    "img/favicon.png",
+    "img/midautumn-lanterns-sky.png",
+    "img/midautumn-mooncake-tea.png",
+    "img/pixel-banner-hero.png",
+    "img/pixel-bg-night-premium.png",
+    "img/pixel-bg-day-premium.png",
+    "_posts/星露谷物品代码前缀速查.md"
   ]
 }

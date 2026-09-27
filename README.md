@@ -23,11 +23,11 @@ Obsidian **只打开写作目录** `source/`（不是整个代码仓库），侧
 
 侧边栏应主要看到：`_posts`、`img`、`_templates`、`about`（`css` 等已排除）。
 
-### 像素风界面（与线上博客同款气质）
+### 界面主题（清雅玄幻国风）
 
-仓库已内置 CSS 片段 `rushenglou-pixel`（一般会自动启用）。
+仓库已内置 CSS 片段 `rushenglou-guofeng`（与线上博客同款）。
 
-若未生效：Obsidian → 设置 → 外观 → **CSS 代码片段** → 打开 `rushenglou-pixel`，再重载窗口（`Ctrl+R`）。
+若未生效：设置 → 外观 → **CSS 代码片段** → 关闭 `rushenglou-pixel`，打开 `rushenglou-guofeng`，再 `Ctrl+R`。
 
 ### 日常流程
 
