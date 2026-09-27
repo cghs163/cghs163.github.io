@@ -147,18 +147,18 @@ color:
 
   # 顶部菜单背景色
   # Color of navigation bar background
-  navbar_bg_color: "#2c3042"
-  navbar_bg_color_dark: "#1c1e2a"
+  navbar_bg_color: "#1f2435"
+  navbar_bg_color_dark: "#151822"
 
   # 顶部菜单字体色
   # Color of navigation bar text
-  navbar_text_color: "#fcf9f3"
-  navbar_text_color_dark: "#e6d3a3"
+  navbar_text_color: "#ffffff"
+  navbar_text_color_dark: "#ffffff"
 
   # 副标题字体色
   # Color of subtitle text
-  subtitle_color: "#fcf9f3"
-  subtitle_color_dark: "#e6d3a3"
+  subtitle_color: "#1f2435"
+  subtitle_color_dark: "#f7f2e8"
 
   # 全局字体色
   # Color of global text
