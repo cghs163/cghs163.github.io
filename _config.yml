@@ -31,10 +31,6 @@ i18n_dir: :lang
 skip_render:
   - .obsidian/**
 
-# 不把 Obsidian 配置发布到网站
-exclude:
-  - .obsidian/**
-
 # Writing
 new_post_name: :title.md # File name of new posts
 default_layout: post
@@ -99,6 +95,7 @@ pagination_dir: page
 ## include:/exclude: options only apply to the 'source/' folder
 include:
 exclude:
+  - .obsidian/**
 ignore:
 
 # Extensions
