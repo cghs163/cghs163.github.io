@@ -1,49 +1,82 @@
-/* 如升楼 · 田园像素风（原创样式，灵感来自农场像素游戏，非官方素材） */
+/* 如升楼 · 高级田园像素风（原创视觉，非官方游戏素材） */
 
 @import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&family=ZCOOL+KuaiLe&display=swap");
 
 :root {
-  --sdv-sky: #7ec8e3;
-  --sdv-grass: #6abe30;
   --sdv-wood: #8b5a2b;
-  --sdv-wood-dark: #4a2c0a;
-  --sdv-cream: #fff6d6;
+  --sdv-wood-dark: #3d2410;
+  --sdv-cream: #fff8e7;
   --sdv-gold: #f6d365;
-  --sdv-ink: #3b2a1a;
-  --sdv-shadow: #2b1d12;
+  --sdv-ink: #2f2114;
+  --sdv-grass: #5aaa2a;
+  --sdv-shadow: rgba(30, 18, 8, 0.45);
+  --sdv-panel-glow: rgba(255, 236, 170, 0.55);
 }
 
+/* ========== 全屏沉浸背景（告别三色条） ========== */
 body {
-  background-color: var(--sdv-sky) !important;
+  background-color: #6aa8c8 !important;
   background-image:
-    radial-gradient(circle at 12% 18%, rgba(255, 255, 255, 0.55) 0 18px, transparent 19px),
-    radial-gradient(circle at 78% 22%, rgba(255, 255, 255, 0.4) 0 28px, transparent 29px),
     linear-gradient(
       180deg,
-      #9ad7ef 0%,
-      #7ec8e3 40%,
-      #b8e986 40%,
-      #6abe30 72%,
-      #c68642 72%,
-      #8b5a2b 100%
-    ) !important;
-  background-attachment: fixed;
+      rgba(20, 28, 40, 0.18) 0%,
+      rgba(20, 28, 40, 0.05) 35%,
+      rgba(20, 28, 40, 0.28) 100%
+    ),
+    url("/img/pixel-bg-day-premium.png") !important;
+  background-size: cover !important;
+  background-position: center top !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+  image-rendering: auto;
 }
 
 [data-user-color-scheme="dark"] body,
 html[data-user-color-scheme="dark"] body {
+  background-color: #121826 !important;
   background-image:
-    radial-gradient(circle at 20% 15%, rgba(255, 230, 150, 0.35) 0 3px, transparent 4px),
-    radial-gradient(circle at 70% 25%, rgba(255, 255, 255, 0.5) 0 2px, transparent 3px),
-    radial-gradient(circle at 85% 60%, rgba(255, 255, 255, 0.35) 0 2px, transparent 3px),
-    linear-gradient(180deg, #1b2540 0%, #243556 45%, #2f4a2f 45%, #1f3320 100%) !important;
+    linear-gradient(
+      180deg,
+      rgba(8, 12, 24, 0.35) 0%,
+      rgba(8, 12, 24, 0.15) 40%,
+      rgba(8, 12, 24, 0.55) 100%
+    ),
+    url("/img/pixel-bg-night-premium.png") !important;
+  background-size: cover !important;
+  background-position: center top !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
 }
 
+/* 背景轻微呼吸，增加高级感 */
+@keyframes bgDrift {
+  0% {
+    background-position: center 0%;
+  }
+  50% {
+    background-position: center 3%;
+  }
+  100% {
+    background-position: center 0%;
+  }
+}
+
+@supports (background-attachment: fixed) {
+  body {
+    animation: bgDrift 28s ease-in-out infinite;
+  }
+}
+
+/* ========== 导航：高级木牌 ========== */
 .navbar,
 #navbar {
-  background: linear-gradient(180deg, #a67c52 0%, #8b5a2b 100%) !important;
-  border-bottom: 4px solid var(--sdv-wood-dark) !important;
-  box-shadow: 0 4px 0 #3b2410 !important;
+  background:
+    linear-gradient(180deg, rgba(166, 124, 82, 0.96) 0%, rgba(110, 66, 30, 0.98) 100%) !important;
+  border-bottom: 3px solid #2a1608 !important;
+  box-shadow:
+    0 6px 0 #1a0e06,
+    0 12px 28px rgba(0, 0, 0, 0.28) !important;
+  backdrop-filter: blur(2px);
   font-family: "Pixelify Sans", "ZCOOL KuaiLe", sans-serif !important;
 }
 
@@ -51,20 +84,37 @@ html[data-user-color-scheme="dark"] body {
 .navbar .nav-link,
 #navbar a {
   font-family: "Pixelify Sans", "ZCOOL KuaiLe", sans-serif !important;
-  letter-spacing: 0.02em;
-  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.25);
+  letter-spacing: 0.03em;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.35);
 }
 
 .navbar .navbar-brand {
-  font-size: 1.35rem !important;
+  font-size: 1.45rem !important;
   font-weight: 700 !important;
   color: var(--sdv-gold) !important;
+  filter: drop-shadow(0 0 8px rgba(246, 211, 101, 0.35));
 }
 
+.navbar .nav-item .nav-link:hover {
+  color: #fff6d0 !important;
+  transform: translateY(-1px);
+}
+
+/* ========== Banner ========== */
 #banner,
 .banner {
   image-rendering: pixelated;
   image-rendering: crisp-edges;
+  box-shadow: inset 0 -40px 60px rgba(0, 0, 0, 0.25);
+}
+
+#banner .mask,
+.banner .mask {
+  background: linear-gradient(
+    180deg,
+    rgba(20, 14, 8, 0.15) 0%,
+    rgba(20, 14, 8, 0.35) 100%
+  ) !important;
 }
 
 #banner .banner-text h1,
@@ -72,53 +122,94 @@ html[data-user-color-scheme="dark"] body {
 .banner .banner-text {
   font-family: "Pixelify Sans", "ZCOOL KuaiLe", sans-serif !important;
   text-shadow:
-    3px 3px 0 #2b1d12,
-    -1px 0 0 #2b1d12,
-    0 -1px 0 #2b1d12,
-    1px 0 0 #2b1d12;
+    3px 3px 0 #1a0e06,
+    0 0 18px rgba(255, 220, 120, 0.35);
 }
 
 #banner .banner-text #subtitle,
 #subtitle {
-  background: rgba(252, 234, 187, 0.22);
-  border: 3px solid rgba(74, 44, 10, 0.45);
+  background: linear-gradient(180deg, rgba(255, 246, 214, 0.22), rgba(255, 220, 140, 0.12));
+  border: 3px solid rgba(60, 35, 12, 0.55);
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.25);
   border-radius: 0;
-  padding: 0.35rem 0.85rem;
+  padding: 0.4rem 1rem;
   display: inline-block;
 }
 
+/* ========== 主内容面板：羊皮纸对话框 ========== */
 #board,
 .board {
-  background: var(--sdv-cream) !important;
+  background:
+    linear-gradient(180deg, rgba(255, 252, 240, 0.97) 0%, rgba(255, 244, 214, 0.97) 100%) !important;
   border: 4px solid var(--sdv-wood-dark) !important;
-  border-radius: 0 !important;
+  border-radius: 2px !important;
   box-shadow:
-    0 0 0 4px #c68642,
-    8px 8px 0 rgba(43, 29, 18, 0.35) !important;
-  animation: pixelPop 0.45s steps(6, end);
+    0 0 0 5px #c48a4a,
+    10px 14px 0 rgba(30, 18, 8, 0.28),
+    0 20px 50px rgba(0, 0, 0, 0.18),
+    inset 0 0 40px var(--sdv-panel-glow) !important;
+  position: relative;
+  animation: panelIn 0.55s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+#board::before,
+.board::before {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  border: 2px dashed rgba(139, 90, 43, 0.28);
+  pointer-events: none;
+  z-index: 0;
+}
+
+#board > *,
+.board > * {
+  position: relative;
+  z-index: 1;
 }
 
 [data-user-color-scheme="dark"] #board,
 [data-user-color-scheme="dark"] .board,
 html[data-user-color-scheme="dark"] #board {
-  background: #2a241c !important;
-  border-color: #f6d365 !important;
+  background: linear-gradient(180deg, #2c241b 0%, #211a14 100%) !important;
+  border-color: #e2b85a !important;
   box-shadow:
-    0 0 0 4px #8b5a2b,
-    8px 8px 0 rgba(0, 0, 0, 0.45) !important;
+    0 0 0 5px #8b5a2b,
+    10px 14px 0 rgba(0, 0, 0, 0.45),
+    0 0 40px rgba(246, 211, 101, 0.12),
+    inset 0 0 30px rgba(246, 211, 101, 0.06) !important;
 }
 
-.index-card,
-.list-group-item {
-  border-radius: 0 !important;
+@keyframes panelIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
+/* ========== 文章图片 ========== */
 .index-img img,
 .index-card img,
-.markdown-body img {
-  border: 3px solid var(--sdv-wood-dark);
+.markdown-body img,
+.post-content img {
+  border: 3px solid var(--sdv-wood-dark) !important;
   border-radius: 0 !important;
-  box-shadow: 4px 4px 0 rgba(43, 29, 18, 0.25);
+  box-shadow:
+    6px 6px 0 rgba(43, 29, 18, 0.22),
+    0 12px 28px rgba(0, 0, 0, 0.12) !important;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.markdown-body img:hover,
+.post-content img:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    8px 10px 0 rgba(43, 29, 18, 0.2),
+    0 16px 36px rgba(0, 0, 0, 0.16) !important;
 }
 
 a.index-header,
@@ -127,43 +218,96 @@ a.index-header,
   color: var(--sdv-wood-dark) !important;
 }
 
-a.index-header:hover,
-.index .index-header:hover {
+a.index-header:hover {
   color: #d35400 !important;
 }
 
+/* ========== 标题 ========== */
 .markdown-body h1,
 .markdown-body h2,
 .markdown-body h3,
 .page-header,
 .post-content h1,
 .post-content h2,
-.post-content h3 {
+.post-content h3,
+#board .post-header {
   font-family: "Pixelify Sans", "ZCOOL KuaiLe", sans-serif !important;
   color: var(--sdv-wood-dark) !important;
   border-bottom: 3px solid var(--sdv-gold) !important;
-  padding-bottom: 0.25rem;
+  padding-bottom: 0.3rem;
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.4);
 }
 
 [data-user-color-scheme="dark"] .markdown-body h1,
 [data-user-color-scheme="dark"] .markdown-body h2,
 [data-user-color-scheme="dark"] .markdown-body h3 {
   color: var(--sdv-gold) !important;
+  text-shadow: 0 0 12px rgba(246, 211, 101, 0.25);
 }
 
+/* ========== 目录侧栏：高级感 ========== */
+.sidebar-toc,
+#toc,
+.toc-header,
+.list-group.list-group-flush {
+  font-family: "Pixelify Sans", "ZCOOL KuaiLe", sans-serif;
+}
+
+.toc-header,
+.sidebar .toc-header,
+h1.toc-header,
+.toc .toc-header {
+  background: linear-gradient(180deg, #6ec0e8, #3f8fbf) !important;
+  color: #fff !important;
+  border: 3px solid #1e3a4f !important;
+  border-radius: 0 !important;
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2);
+  padding: 0.35rem 0.6rem !important;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.25);
+}
+
+.toc,
+.sidebar-toc,
+#toc,
+.toc-body {
+  background: linear-gradient(180deg, rgba(230, 246, 255, 0.95), rgba(210, 236, 250, 0.95)) !important;
+  border: 3px solid #2c5f7c !important;
+  border-radius: 0 !important;
+  box-shadow: 5px 5px 0 rgba(30, 18, 8, 0.18) !important;
+}
+
+.toc a,
+#toc a,
+.toc-body a {
+  color: #1f4d66 !important;
+  border-left: 3px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.toc a:hover,
+#toc a:hover,
+.toc-body a:hover,
+.toc .active > a {
+  color: #0d2f40 !important;
+  background: rgba(255, 224, 138, 0.45) !important;
+  border-left-color: #f0b429 !important;
+}
+
+/* ========== 表格 ========== */
 .markdown-body table,
 .post-content table {
   border: 3px solid var(--sdv-wood-dark) !important;
   border-collapse: separate !important;
   border-spacing: 0;
   background: #fffaf0;
-  box-shadow: 4px 4px 0 rgba(43, 29, 18, 0.2);
+  box-shadow: 5px 5px 0 rgba(43, 29, 18, 0.18);
   width: 100%;
+  overflow: hidden;
 }
 
 .markdown-body table th,
 .post-content table th {
-  background: linear-gradient(180deg, #f6d365, #e0b567) !important;
+  background: linear-gradient(180deg, #ffe08a, #f0b429) !important;
   color: var(--sdv-ink) !important;
   font-family: "Pixelify Sans", "ZCOOL KuaiLe", sans-serif !important;
   border: 2px solid var(--sdv-wood-dark) !important;
@@ -179,6 +323,11 @@ a.index-header:hover,
   background: rgba(106, 190, 48, 0.08);
 }
 
+.markdown-body table tr:hover td {
+  background: rgba(246, 211, 101, 0.22) !important;
+}
+
+/* ========== 代码 / 引用 ========== */
 .markdown-body code,
 .post-content code {
   background: #fff1c2 !important;
@@ -192,62 +341,80 @@ a.index-header:hover,
 .hljs {
   border: 3px solid var(--sdv-wood-dark) !important;
   border-radius: 0 !important;
-  box-shadow: 4px 4px 0 rgba(43, 29, 18, 0.2);
+  box-shadow: 4px 4px 0 rgba(43, 29, 18, 0.18);
 }
 
-footer,
-#footer {
-  font-family: "Pixelify Sans", "ZCOOL KuaiLe", sans-serif !important;
-  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.35);
-}
-
-#scroll-top-button,
-.scroll-top-button {
+.markdown-body blockquote {
+  border-left: 6px solid var(--sdv-grass) !important;
+  background: linear-gradient(90deg, rgba(106, 190, 48, 0.16), rgba(106, 190, 48, 0.04));
   border-radius: 0 !important;
-  border: 3px solid var(--sdv-wood-dark) !important;
-  background: var(--sdv-gold) !important;
-  color: var(--sdv-ink) !important;
-  box-shadow: 3px 3px 0 var(--sdv-shadow) !important;
+  box-shadow: inset 0 0 0 1px rgba(90, 140, 50, 0.15);
 }
 
+/* ========== 标签 ========== */
 .post-meta .category-chain a,
 .category a,
 .tag-cloud a,
 .post-tags a {
   border-radius: 0 !important;
   border: 2px solid var(--sdv-wood-dark) !important;
-  background: #ffe08a !important;
+  background: linear-gradient(180deg, #ffe08a, #f6d365) !important;
   color: var(--sdv-ink) !important;
   box-shadow: 2px 2px 0 rgba(43, 29, 18, 0.25);
   font-family: "Pixelify Sans", "ZCOOL KuaiLe", sans-serif !important;
 }
 
-.markdown-body blockquote {
-  border-left: 6px solid var(--sdv-grass) !important;
-  background: rgba(106, 190, 48, 0.12);
-  border-radius: 0 !important;
+/* ========== 页脚 / TOP ========== */
+footer,
+#footer {
+  font-family: "Pixelify Sans", "ZCOOL KuaiLe", sans-serif !important;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.4);
+  background: linear-gradient(180deg, transparent, rgba(20, 12, 6, 0.35));
+  padding-top: 1.5rem;
 }
 
-@keyframes pixelPop {
-  from {
-    transform: translateY(8px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
+#scroll-top-button,
+.scroll-top-button {
+  border-radius: 0 !important;
+  border: 3px solid var(--sdv-wood-dark) !important;
+  background: linear-gradient(180deg, #ffe08a, #f0b429) !important;
+  color: var(--sdv-ink) !important;
+  box-shadow: 3px 3px 0 #1a0e06 !important;
+  transition: transform 0.15s steps(2);
+}
+
+#scroll-top-button:hover,
+.scroll-top-button:hover {
+  transform: translateY(-2px);
+}
+
+/* 首页文章卡片分隔 */
+.index-info {
+  border-bottom: 2px dashed rgba(139, 90, 43, 0.25);
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 @media (max-width: 768px) {
+  body {
+    background-attachment: scroll !important;
+    animation: none !important;
+  }
+
   .navbar .navbar-brand {
-    font-size: 1.1rem !important;
+    font-size: 1.15rem !important;
   }
 
   #board,
   .board {
     box-shadow:
-      0 0 0 3px #c68642,
-      4px 4px 0 rgba(43, 29, 18, 0.3) !important;
+      0 0 0 3px #c48a4a,
+      5px 7px 0 rgba(30, 18, 8, 0.25),
+      0 12px 28px rgba(0, 0, 0, 0.15) !important;
+  }
+
+  #board::before,
+  .board::before {
+    inset: 5px;
   }
 }
