@@ -1,0 +1,253 @@
+/* 如升楼 · 田园像素风（原创样式，灵感来自农场像素游戏，非官方素材） */
+
+@import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&family=ZCOOL+KuaiLe&display=swap");
+
+:root {
+  --sdv-sky: #7ec8e3;
+  --sdv-grass: #6abe30;
+  --sdv-wood: #8b5a2b;
+  --sdv-wood-dark: #4a2c0a;
+  --sdv-cream: #fff6d6;
+  --sdv-gold: #f6d365;
+  --sdv-ink: #3b2a1a;
+  --sdv-shadow: #2b1d12;
+}
+
+body {
+  background-color: var(--sdv-sky) !important;
+  background-image:
+    radial-gradient(circle at 12% 18%, rgba(255, 255, 255, 0.55) 0 18px, transparent 19px),
+    radial-gradient(circle at 78% 22%, rgba(255, 255, 255, 0.4) 0 28px, transparent 29px),
+    linear-gradient(
+      180deg,
+      #9ad7ef 0%,
+      #7ec8e3 40%,
+      #b8e986 40%,
+      #6abe30 72%,
+      #c68642 72%,
+      #8b5a2b 100%
+    ) !important;
+  background-attachment: fixed;
+}
+
+[data-user-color-scheme="dark"] body,
+html[data-user-color-scheme="dark"] body {
+  background-image:
+    radial-gradient(circle at 20% 15%, rgba(255, 230, 150, 0.35) 0 3px, transparent 4px),
+    radial-gradient(circle at 70% 25%, rgba(255, 255, 255, 0.5) 0 2px, transparent 3px),
+    radial-gradient(circle at 85% 60%, rgba(255, 255, 255, 0.35) 0 2px, transparent 3px),
+    linear-gradient(180deg, #1b2540 0%, #243556 45%, #2f4a2f 45%, #1f3320 100%) !important;
+}
+
+.navbar,
+#navbar {
+  background: linear-gradient(180deg, #a67c52 0%, #8b5a2b 100%) !important;
+  border-bottom: 4px solid var(--sdv-wood-dark) !important;
+  box-shadow: 0 4px 0 #3b2410 !important;
+  font-family: "Pixelify Sans", "ZCOOL KuaiLe", sans-serif !important;
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link,
+#navbar a {
+  font-family: "Pixelify Sans", "ZCOOL KuaiLe", sans-serif !important;
+  letter-spacing: 0.02em;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.25);
+}
+
+.navbar .navbar-brand {
+  font-size: 1.35rem !important;
+  font-weight: 700 !important;
+  color: var(--sdv-gold) !important;
+}
+
+#banner,
+.banner {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+#banner .banner-text h1,
+#banner .banner-text #subtitle,
+.banner .banner-text {
+  font-family: "Pixelify Sans", "ZCOOL KuaiLe", sans-serif !important;
+  text-shadow:
+    3px 3px 0 #2b1d12,
+    -1px 0 0 #2b1d12,
+    0 -1px 0 #2b1d12,
+    1px 0 0 #2b1d12;
+}
+
+#banner .banner-text #subtitle,
+#subtitle {
+  background: rgba(252, 234, 187, 0.22);
+  border: 3px solid rgba(74, 44, 10, 0.45);
+  border-radius: 0;
+  padding: 0.35rem 0.85rem;
+  display: inline-block;
+}
+
+#board,
+.board {
+  background: var(--sdv-cream) !important;
+  border: 4px solid var(--sdv-wood-dark) !important;
+  border-radius: 0 !important;
+  box-shadow:
+    0 0 0 4px #c68642,
+    8px 8px 0 rgba(43, 29, 18, 0.35) !important;
+  animation: pixelPop 0.45s steps(6, end);
+}
+
+[data-user-color-scheme="dark"] #board,
+[data-user-color-scheme="dark"] .board,
+html[data-user-color-scheme="dark"] #board {
+  background: #2a241c !important;
+  border-color: #f6d365 !important;
+  box-shadow:
+    0 0 0 4px #8b5a2b,
+    8px 8px 0 rgba(0, 0, 0, 0.45) !important;
+}
+
+.index-card,
+.list-group-item {
+  border-radius: 0 !important;
+}
+
+.index-img img,
+.index-card img,
+.markdown-body img {
+  border: 3px solid var(--sdv-wood-dark);
+  border-radius: 0 !important;
+  box-shadow: 4px 4px 0 rgba(43, 29, 18, 0.25);
+}
+
+a.index-header,
+.index .index-header {
+  font-family: "Pixelify Sans", "ZCOOL KuaiLe", sans-serif !important;
+  color: var(--sdv-wood-dark) !important;
+}
+
+a.index-header:hover,
+.index .index-header:hover {
+  color: #d35400 !important;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.page-header,
+.post-content h1,
+.post-content h2,
+.post-content h3 {
+  font-family: "Pixelify Sans", "ZCOOL KuaiLe", sans-serif !important;
+  color: var(--sdv-wood-dark) !important;
+  border-bottom: 3px solid var(--sdv-gold) !important;
+  padding-bottom: 0.25rem;
+}
+
+[data-user-color-scheme="dark"] .markdown-body h1,
+[data-user-color-scheme="dark"] .markdown-body h2,
+[data-user-color-scheme="dark"] .markdown-body h3 {
+  color: var(--sdv-gold) !important;
+}
+
+.markdown-body table,
+.post-content table {
+  border: 3px solid var(--sdv-wood-dark) !important;
+  border-collapse: separate !important;
+  border-spacing: 0;
+  background: #fffaf0;
+  box-shadow: 4px 4px 0 rgba(43, 29, 18, 0.2);
+  width: 100%;
+}
+
+.markdown-body table th,
+.post-content table th {
+  background: linear-gradient(180deg, #f6d365, #e0b567) !important;
+  color: var(--sdv-ink) !important;
+  font-family: "Pixelify Sans", "ZCOOL KuaiLe", sans-serif !important;
+  border: 2px solid var(--sdv-wood-dark) !important;
+}
+
+.markdown-body table td,
+.post-content table td {
+  border: 2px solid #d2b48c !important;
+  font-family: ui-monospace, "Cascadia Mono", Consolas, monospace;
+}
+
+.markdown-body table tr:nth-child(even) td {
+  background: rgba(106, 190, 48, 0.08);
+}
+
+.markdown-body code,
+.post-content code {
+  background: #fff1c2 !important;
+  color: #8b1e1e !important;
+  border: 2px solid #c68642;
+  border-radius: 0 !important;
+  padding: 0.05rem 0.3rem;
+}
+
+.markdown-body pre,
+.hljs {
+  border: 3px solid var(--sdv-wood-dark) !important;
+  border-radius: 0 !important;
+  box-shadow: 4px 4px 0 rgba(43, 29, 18, 0.2);
+}
+
+footer,
+#footer {
+  font-family: "Pixelify Sans", "ZCOOL KuaiLe", sans-serif !important;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.35);
+}
+
+#scroll-top-button,
+.scroll-top-button {
+  border-radius: 0 !important;
+  border: 3px solid var(--sdv-wood-dark) !important;
+  background: var(--sdv-gold) !important;
+  color: var(--sdv-ink) !important;
+  box-shadow: 3px 3px 0 var(--sdv-shadow) !important;
+}
+
+.post-meta .category-chain a,
+.category a,
+.tag-cloud a,
+.post-tags a {
+  border-radius: 0 !important;
+  border: 2px solid var(--sdv-wood-dark) !important;
+  background: #ffe08a !important;
+  color: var(--sdv-ink) !important;
+  box-shadow: 2px 2px 0 rgba(43, 29, 18, 0.25);
+  font-family: "Pixelify Sans", "ZCOOL KuaiLe", sans-serif !important;
+}
+
+.markdown-body blockquote {
+  border-left: 6px solid var(--sdv-grass) !important;
+  background: rgba(106, 190, 48, 0.12);
+  border-radius: 0 !important;
+}
+
+@keyframes pixelPop {
+  from {
+    transform: translateY(8px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar .navbar-brand {
+    font-size: 1.1rem !important;
+  }
+
+  #board,
+  .board {
+    box-shadow:
+      0 0 0 3px #c68642,
+      4px 4px 0 rgba(43, 29, 18, 0.3) !important;
+  }
+}

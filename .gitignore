@@ -6,3 +6,8 @@ node_modules/
 public/
 .deploy*/
 _multiconfig.yml
+tmp_docx_extract/
+tmp_stardew.docx.zip
+tmp_docx_text.txt
+tools/docx_out.txt
+tools/extract-docx.js
