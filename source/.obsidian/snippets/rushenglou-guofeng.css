@@ -189,37 +189,58 @@ body,
   color: #ffffff !important;
 }
 
-/* 标签页文字 */
+/* 顶部文章标签：强制深色字 + 浅底，避免“文章名看不见” */
+.workspace-tab-header-container,
+.workspace-tab-header-container-inner,
+.workspace-tabs .workspace-tab-header-container {
+  background: #e8e0d0 !important;
+  border-bottom: 1px solid #8a6a2f !important;
+}
+
 .workspace-tab-header,
+.workspace-tab-header-inner,
 .workspace-tab-header-inner-title,
-.workspace-tab-header-inner {
+.workspace-tab-header-inner-icon,
+.workspace-tab-header .svg-icon {
   color: #1a1a1f !important;
+  fill: #1a1a1f !important;
+  stroke: #1a1a1f !important;
   opacity: 1 !important;
+  -webkit-text-fill-color: #1a1a1f !important;
+  font-weight: 600 !important;
+}
+
+.workspace-tab-header.is-active,
+.workspace-tab-header.is-active .workspace-tab-header-inner,
+.workspace-tab-header.is-active .workspace-tab-header-inner-title,
+.workspace-tab-header.is-active .svg-icon {
+  background: #fffaf0 !important;
+  color: #000000 !important;
+  fill: #000000 !important;
+  -webkit-text-fill-color: #000000 !important;
+  border: 1px solid #8a6a2f !important;
+  font-weight: 700 !important;
+}
+
+.workspace-tab-header:not(.is-active) {
+  background: #dfd5c2 !important;
+}
+
+.theme-dark .workspace-tab-header-container {
+  background: #2a3044 !important;
 }
 
 .theme-dark .workspace-tab-header,
 .theme-dark .workspace-tab-header-inner-title {
-  color: #f5f0e6 !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
 }
 
-.workspace-tab-header.is-active {
-  background: #fffcf7 !important;
-  color: #1a1a1f !important;
-  border: 1px solid #c9b896 !important;
-}
-
-.theme-dark .workspace-tab-header.is-active {
+.theme-dark .workspace-tab-header.is-active,
+.theme-dark .workspace-tab-header.is-active .workspace-tab-header-inner-title {
   background: #e6d3a3 !important;
-  color: #1a1a1f !important;
-}
-
-.workspace-tab-header-container {
-  background: #efe9dc !important;
-  border-bottom: 1px solid #c9b896 !important;
-}
-
-.theme-dark .workspace-tab-header-container {
-  background: #141722 !important;
+  color: #000000 !important;
+  -webkit-text-fill-color: #000000 !important;
 }
 
 /* 顶栏 / 状态栏：强制白字（修复左上角标题看不见） */
@@ -272,25 +293,47 @@ body > .titlebar {
   -webkit-text-fill-color: #ffffff !important;
 }
 
+/* 编辑区顶栏路径 / 文章名（如 _posts / 思） */
+.view-header {
+  background: #f3efe6 !important;
+  border-bottom: 1px solid #c9b896 !important;
+}
+
 .view-header,
 .view-header-title,
+.view-header-title-parent,
+.view-header-title-parent a,
+.view-header-breadcrumb,
+.view-header-breadcrumb-separator,
 .view-action,
 .view-header-icon,
 .view-header .clickable-icon,
-.view-header .clickable-icon .svg-icon {
-  color: #1a1a1f !important;
-  stroke: #1a1a1f !important;
-  fill: currentColor !important;
+.view-header .clickable-icon .svg-icon,
+.view-header .view-header-title-container,
+.view-header .view-header-title-container * {
+  color: #111111 !important;
+  stroke: #111111 !important;
+  fill: #111111 !important;
   opacity: 1 !important;
-  -webkit-text-fill-color: #1a1a1f !important;
+  -webkit-text-fill-color: #111111 !important;
+  font-weight: 600 !important;
+}
+
+.theme-dark .view-header {
+  background: #222636 !important;
 }
 
 .theme-dark .view-header,
 .theme-dark .view-header-title,
+.theme-dark .view-header-title-parent,
+.theme-dark .view-header-title-parent a,
 .theme-dark .view-action,
-.theme-dark .view-header .clickable-icon {
-  color: #f5f0e6 !important;
-  -webkit-text-fill-color: #f5f0e6 !important;
+.theme-dark .view-header .clickable-icon,
+.theme-dark .view-header .view-header-title-container * {
+  color: #ffffff !important;
+  stroke: #ffffff !important;
+  fill: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
 }
 
 /* 左侧栏顶部按钮 / 空状态「找不到路径」 */
