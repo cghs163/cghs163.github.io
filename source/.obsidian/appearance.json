@@ -1,14 +1,15 @@
 {
-  "accentColor": "#6f8f86",
+  "accentColor": "#2f5f55",
   "cssTheme": "",
   "theme": "moonstone",
   "baseFontSize": 17,
-  "interfaceFontFamily": "ZCOOL XiaoWei,Noto Serif SC",
-  "textFontFamily": "Noto Serif SC,ZCOOL XiaoWei",
-  "monospaceFontFamily": "Cascadia Mono,Consolas,monospace",
+  "interfaceFontFamily": "Microsoft YaHei",
+  "textFontFamily": "Noto Serif SC,Microsoft YaHei",
+  "monospaceFontFamily": "Consolas,monospace",
   "enabledCssSnippets": [
     "rushenglou-guofeng"
   ],
   "showViewHeader": true,
-  "nativeMenus": false
+  "nativeMenus": false,
+  "translucency": false
 }
