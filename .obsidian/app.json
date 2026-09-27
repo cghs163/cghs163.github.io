@@ -1,0 +1,12 @@
+{
+  "alwaysUpdateLinks": true,
+  "newFileLocation": "folder",
+  "newFileFolderPath": "source/_posts",
+  "attachmentFolderPath": "source/img/library",
+  "showLineNumber": true,
+  "strictLineBreaks": false,
+  "useMarkdownLinks": false,
+  "showUnsupportedFiles": true,
+  "userRelativePath": true,
+  "spellcheck": false
+}

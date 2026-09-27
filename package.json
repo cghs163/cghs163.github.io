@@ -8,7 +8,8 @@
     "server": "hexo server",
     "clean": "hexo clean",
     "build": "hexo clean && hexo generate",
-    "deploy": "powershell -ExecutionPolicy Bypass -File ./tools/deploy.ps1"
+    "deploy": "powershell -ExecutionPolicy Bypass -File ./tools/deploy.ps1",
+    "obsidian": "powershell -ExecutionPolicy Bypass -File ./tools/open-obsidian.ps1"
   },
   "hexo": {
     "version": "8.1.2"
