@@ -1,6 +1,14 @@
 {
-  "accentColor": "",
+  "accentColor": "#c48a4a",
   "cssTheme": "",
   "theme": "moonstone",
-  "baseFontSize": 16
+  "baseFontSize": 17,
+  "interfaceFontFamily": "Pixelify Sans,ZCOOL KuaiLe",
+  "textFontFamily": "Pixelify Sans,ZCOOL KuaiLe",
+  "monospaceFontFamily": "Cascadia Mono,Consolas,monospace",
+  "enabledCssSnippets": [
+    "rushenglou-pixel"
+  ],
+  "showViewHeader": true,
+  "nativeMenus": false
 }

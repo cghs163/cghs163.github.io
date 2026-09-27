@@ -1,0 +1,447 @@
+/* =========================================================
+   如升楼 · Obsidian 像素田园主题
+   与线上博客 stardew-pixel / obsidian-content 风格对齐
+   ========================================================= */
+
+@import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&family=ZCOOL+KuaiLe&display=swap");
+
+:root {
+  --rl-sky: #7ec8e3;
+  --rl-sky-deep: #5aa8c8;
+  --rl-grass: #6abe30;
+  --rl-grass-deep: #3e8c2a;
+  --rl-dirt: #c68642;
+  --rl-wood: #8b5a2b;
+  --rl-wood-dark: #3d2410;
+  --rl-wood-light: #a67c52;
+  --rl-cream: #fff8e7;
+  --rl-cream-2: #fff1c8;
+  --rl-gold: #f6d365;
+  --rl-gold-deep: #e0b567;
+  --rl-ink: #2f2114;
+  --rl-muted: #6b4f32;
+  --rl-panel: rgba(255, 248, 231, 0.92);
+  --rl-shadow: rgba(30, 18, 8, 0.35);
+
+  --background-primary: var(--rl-cream) !important;
+  --background-primary-alt: var(--rl-cream-2) !important;
+  --background-secondary: #f3e2b8 !important;
+  --background-secondary-alt: #ead3a0 !important;
+  --background-modifier-border: var(--rl-wood) !important;
+  --background-modifier-hover: rgba(246, 211, 101, 0.35) !important;
+  --background-modifier-active-hover: rgba(246, 211, 101, 0.5) !important;
+
+  --text-normal: var(--rl-ink) !important;
+  --text-muted: var(--rl-muted) !important;
+  --text-faint: #8a6a45 !important;
+  --text-accent: #b45309 !important;
+  --text-accent-hover: #d97706 !important;
+  --text-on-accent: #fff8e7 !important;
+
+  --interactive-accent: var(--rl-wood) !important;
+  --interactive-accent-hover: var(--rl-wood-light) !important;
+  --interactive-normal: #f0d9a0 !important;
+  --interactive-hover: var(--rl-gold) !important;
+
+  --titlebar-background: var(--rl-wood-dark) !important;
+  --titlebar-background-focused: var(--rl-wood) !important;
+
+  --ribbon-background: linear-gradient(180deg, #a67c52, #6e421e) !important;
+  --nav-item-color: var(--rl-ink) !important;
+  --nav-item-color-hover: var(--rl-wood-dark) !important;
+  --nav-item-color-active: var(--rl-wood-dark) !important;
+  --nav-item-background-active: rgba(246, 211, 101, 0.55) !important;
+
+  --tab-container-background: #ead3a0 !important;
+  --tab-radius: 0 !important;
+  --radius-s: 0 !important;
+  --radius-m: 0 !important;
+  --radius-l: 0 !important;
+  --radius-xl: 0 !important;
+
+  --font-interface: "Pixelify Sans", "ZCOOL KuaiLe", "Microsoft YaHei", sans-serif !important;
+  --font-text: "Pixelify Sans", "ZCOOL KuaiLe", "Microsoft YaHei", sans-serif !important;
+  --font-editor: "Pixelify Sans", "ZCOOL KuaiLe", "Microsoft YaHei", sans-serif !important;
+  --font-monospace: "Cascadia Mono", Consolas, ui-monospace, monospace !important;
+
+  --blockquote-border-thickness: 6px !important;
+  --blockquote-border-color: var(--rl-grass) !important;
+  --checklist-done-color: var(--rl-grass-deep) !important;
+  --h1-color: var(--rl-wood-dark) !important;
+  --h2-color: var(--rl-wood-dark) !important;
+  --h3-color: var(--rl-wood) !important;
+  --h1-size: 1.7em !important;
+  --h2-size: 1.4em !important;
+  --h3-size: 1.2em !important;
+  --inline-title-color: var(--rl-wood-dark) !important;
+  --bold-color: #7c2d12 !important;
+  --link-color: #2f7d32 !important;
+  --link-color-hover: #d35400 !important;
+  --link-unresolved-color: #b45309 !important;
+  --tag-background: #ffe08a !important;
+  --tag-color: var(--rl-ink) !important;
+  --tag-radius: 0 !important;
+  --divider-color: #d2b48c !important;
+  --canvas-color: 139, 90, 43;
+}
+
+/* ---------- 暗色：星夜田园 ---------- */
+.theme-dark {
+  --rl-cream: #2a241c;
+  --rl-cream-2: #211a14;
+  --rl-ink: #f3e6c8;
+  --rl-muted: #cbb896;
+  --background-primary: #2a241c !important;
+  --background-primary-alt: #211a14 !important;
+  --background-secondary: #1b1611 !important;
+  --background-secondary-alt: #15110d !important;
+  --text-normal: #f3e6c8 !important;
+  --text-muted: #cbb896 !important;
+  --text-accent: #f6d365 !important;
+  --h1-color: #f6d365 !important;
+  --h2-color: #f6d365 !important;
+  --h3-color: #e0b567 !important;
+  --inline-title-color: #f6d365 !important;
+  --link-color: #8fd46a !important;
+  --nav-item-color: #f3e6c8 !important;
+  --tab-container-background: #1b1611 !important;
+}
+
+/* ---------- 工作区背景：优雅像素天际线感 ---------- */
+body {
+  background:
+    radial-gradient(circle at 12% 14%, rgba(255, 255, 255, 0.45) 0 16px, transparent 17px),
+    radial-gradient(circle at 78% 18%, rgba(255, 255, 255, 0.3) 0 24px, transparent 25px),
+    linear-gradient(
+      180deg,
+      #9ad7ef 0%,
+      #7ec8e3 34%,
+      #b8e986 34%,
+      #6abe30 68%,
+      #c68642 68%,
+      #8b5a2b 100%
+    ) !important;
+  background-attachment: fixed !important;
+}
+
+.theme-dark body {
+  background:
+    radial-gradient(circle at 18% 12%, rgba(255, 230, 150, 0.35) 0 3px, transparent 4px),
+    radial-gradient(circle at 70% 22%, rgba(255, 255, 255, 0.45) 0 2px, transparent 3px),
+    radial-gradient(circle at 86% 55%, rgba(255, 255, 255, 0.3) 0 2px, transparent 3px),
+    linear-gradient(180deg, #1b2540 0%, #243556 46%, #2f4a2f 46%, #1f3320 100%) !important;
+}
+
+.workspace,
+.workspace-split,
+.workspace-tabs,
+.workspace-tab-header-container {
+  background: transparent !important;
+}
+
+/* ---------- 左侧丝带 / 文件栏：木牌感 ---------- */
+.workspace-ribbon,
+.workspace-ribbon.mod-left {
+  background: linear-gradient(180deg, #a67c52 0%, #6e421e 100%) !important;
+  border-right: 3px solid #1a0e06 !important;
+  box-shadow: 3px 0 0 #2a1608;
+}
+
+.workspace-ribbon.mod-left .side-dock-ribbon-action {
+  color: #fff6d6 !important;
+  opacity: 0.9;
+}
+
+.workspace-ribbon.mod-left .side-dock-ribbon-action:hover {
+  background: rgba(246, 211, 101, 0.25) !important;
+  color: #fff !important;
+}
+
+.workspace-leaf-content[data-type="file-explorer"],
+.workspace-leaf-content[data-type="search"],
+.workspace-leaf-content[data-type="bookmarks"],
+.nav-files-container,
+.tree-item {
+  font-family: var(--font-interface);
+}
+
+.nav-folder-title,
+.nav-file-title {
+  border-radius: 0 !important;
+  border: 2px solid transparent;
+}
+
+.nav-file-title.is-active,
+.nav-folder-title.is-active {
+  background: linear-gradient(180deg, #ffe08a, #f6d365) !important;
+  border: 2px solid var(--rl-wood-dark) !important;
+  box-shadow: 2px 2px 0 var(--rl-shadow);
+  color: var(--rl-wood-dark) !important;
+  font-weight: 700;
+}
+
+.nav-file-title:hover,
+.nav-folder-title:hover {
+  background: rgba(255, 224, 138, 0.45) !important;
+}
+
+/* ---------- 顶栏 / 标签页 ---------- */
+.workspace-tab-header-container {
+  border-bottom: 3px solid var(--rl-wood-dark) !important;
+  background: linear-gradient(180deg, #f0d9a0, #e2c07a) !important;
+  box-shadow: 0 3px 0 rgba(30, 18, 8, 0.2);
+}
+
+.workspace-tab-header {
+  border-radius: 0 !important;
+  border: 2px solid transparent;
+  font-family: var(--font-interface);
+}
+
+.workspace-tab-header.is-active {
+  background: linear-gradient(180deg, #fff8e7, #ffe08a) !important;
+  border: 2px solid var(--rl-wood-dark) !important;
+  box-shadow: 2px 2px 0 var(--rl-shadow);
+  color: var(--rl-wood-dark) !important;
+}
+
+.titlebar,
+.titlebar-inner {
+  background: linear-gradient(180deg, #a67c52, #6e421e) !important;
+  color: #fff6d6 !important;
+}
+
+/* ---------- 编辑区：羊皮纸面板 ---------- */
+.markdown-source-view.mod-cm6 .cm-editor,
+.markdown-preview-view,
+.workspace-leaf-content[data-type="markdown"] {
+  background: transparent !important;
+}
+
+.view-content {
+  background: transparent !important;
+}
+
+.markdown-source-view.mod-cm6,
+.markdown-preview-view {
+  background:
+    linear-gradient(180deg, rgba(255, 252, 240, 0.96), rgba(255, 244, 214, 0.96)) !important;
+  border: 4px solid var(--rl-wood-dark);
+  box-shadow:
+    0 0 0 4px #c48a4a,
+    8px 10px 0 var(--rl-shadow),
+    inset 0 0 36px rgba(255, 236, 170, 0.35);
+  margin: 10px 14px 16px;
+  padding: 8px 6px;
+}
+
+.theme-dark .markdown-source-view.mod-cm6,
+.theme-dark .markdown-preview-view {
+  background: linear-gradient(180deg, rgba(44, 36, 27, 0.96), rgba(33, 26, 20, 0.96)) !important;
+  border-color: #e2b85a;
+  box-shadow:
+    0 0 0 4px #8b5a2b,
+    8px 10px 0 rgba(0, 0, 0, 0.45),
+    0 0 28px rgba(246, 211, 101, 0.1);
+}
+
+.cm-content,
+.markdown-preview-section {
+  max-width: 780px;
+  margin: 0 auto;
+  font-size: 1.02rem;
+  line-height: 1.75;
+  letter-spacing: 0.02em;
+}
+
+/* 标题优雅像素感 */
+.cm-header,
+.markdown-preview-view h1,
+.markdown-preview-view h2,
+.markdown-preview-view h3,
+.inline-title {
+  font-family: "Pixelify Sans", "ZCOOL KuaiLe", sans-serif !important;
+  letter-spacing: 0.04em;
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.35);
+}
+
+.markdown-preview-view h1,
+.markdown-preview-view h2,
+.markdown-preview-view h3,
+.HyperMD-header {
+  border-bottom: 3px solid var(--rl-gold) !important;
+  padding-bottom: 0.25rem;
+  margin-top: 1.4em;
+}
+
+.theme-dark .cm-header,
+.theme-dark .markdown-preview-view h1,
+.theme-dark .markdown-preview-view h2,
+.theme-dark .inline-title {
+  text-shadow: 0 0 12px rgba(246, 211, 101, 0.25);
+}
+
+/* 引用 / Callout */
+.markdown-preview-view blockquote,
+.cm-quote {
+  border-left: 6px solid var(--rl-grass) !important;
+  background: rgba(106, 190, 48, 0.12);
+  border-radius: 0 !important;
+  padding: 0.4rem 0.8rem;
+}
+
+.callout {
+  border: 3px solid var(--rl-wood-dark) !important;
+  border-left-width: 8px !important;
+  border-radius: 0 !important;
+  background: rgba(255, 246, 214, 0.9) !important;
+  box-shadow: 4px 4px 0 var(--rl-shadow);
+}
+
+.callout[data-callout="tip"],
+.callout[data-callout="hint"] {
+  border-left-color: #16a34a !important;
+  background: rgba(220, 252, 231, 0.85) !important;
+}
+
+.callout[data-callout="warning"],
+.callout[data-callout="caution"] {
+  border-left-color: #f59e0b !important;
+  background: rgba(254, 243, 199, 0.9) !important;
+}
+
+.callout[data-callout="note"],
+.callout[data-callout="info"] {
+  border-left-color: #3b82f6 !important;
+  background: rgba(219, 234, 254, 0.85) !important;
+}
+
+.callout[data-callout="danger"],
+.callout[data-callout="error"] {
+  border-left-color: #dc2626 !important;
+  background: rgba(254, 226, 226, 0.9) !important;
+}
+
+.callout-title {
+  font-family: "Pixelify Sans", "ZCOOL KuaiLe", sans-serif !important;
+  font-weight: 700 !important;
+}
+
+/* 代码块：像素木框 */
+.markdown-preview-view code,
+.cm-inline-code {
+  background: #fff1c2 !important;
+  color: #8b1e1e !important;
+  border: 2px solid #c68642 !important;
+  border-radius: 0 !important;
+  padding: 0.05rem 0.3rem;
+}
+
+.markdown-preview-view pre,
+.cm-s-obsidian .cm-line.HyperMD-codeblock {
+  border-radius: 0 !important;
+}
+
+.markdown-preview-view pre {
+  border: 3px solid var(--rl-wood-dark) !important;
+  box-shadow: 4px 4px 0 var(--rl-shadow);
+  background: #fffaf0 !important;
+}
+
+/* 图片 */
+.markdown-preview-view img {
+  border: 3px solid var(--rl-wood-dark) !important;
+  border-radius: 0 !important;
+  box-shadow: 5px 5px 0 var(--rl-shadow);
+  display: block;
+  margin: 1.1rem auto;
+}
+
+/* 表格 */
+.markdown-preview-view table {
+  border: 3px solid var(--rl-wood-dark) !important;
+  box-shadow: 4px 4px 0 var(--rl-shadow);
+  background: #fffaf0;
+}
+
+.markdown-preview-view th {
+  background: linear-gradient(180deg, #ffe08a, #f0b429) !important;
+  color: var(--rl-ink) !important;
+  border: 2px solid var(--rl-wood-dark) !important;
+  font-family: "Pixelify Sans", "ZCOOL KuaiLe", sans-serif;
+}
+
+.markdown-preview-view td {
+  border: 2px solid #d2b48c !important;
+}
+
+/* 标签 */
+.tag,
+a.tag {
+  border: 2px solid var(--rl-wood-dark) !important;
+  border-radius: 0 !important;
+  background: linear-gradient(180deg, #ffe08a, #f6d365) !important;
+  color: var(--rl-ink) !important;
+  box-shadow: 2px 2px 0 var(--rl-shadow);
+  font-family: "Pixelify Sans", "ZCOOL KuaiLe", sans-serif !important;
+}
+
+/* 滚动条 */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #c68642, #8b5a2b);
+  border: 2px solid #3d2410;
+}
+::-webkit-scrollbar-track {
+  background: rgba(255, 248, 231, 0.45);
+}
+
+/* 状态栏 */
+.status-bar {
+  background: linear-gradient(180deg, #a67c52, #6e421e) !important;
+  color: #fff6d6 !important;
+  border-top: 3px solid #1a0e06 !important;
+  font-family: var(--font-interface);
+}
+
+/* 模态框 / 设置 */
+.modal,
+.prompt,
+.vertical-tab-header,
+.vertical-tab-content {
+  border-radius: 0 !important;
+}
+
+.modal {
+  border: 4px solid var(--rl-wood-dark) !important;
+  box-shadow:
+    0 0 0 4px #c48a4a,
+    10px 12px 0 var(--rl-shadow) !important;
+  background: var(--rl-cream) !important;
+}
+
+.mod-cta {
+  background: linear-gradient(180deg, #ffe08a, #f0b429) !important;
+  color: var(--rl-ink) !important;
+  border: 2px solid var(--rl-wood-dark) !important;
+  border-radius: 0 !important;
+  box-shadow: 2px 2px 0 var(--rl-shadow);
+  font-family: var(--font-interface);
+  font-weight: 700;
+}
+
+/* Properties 前缀区更克制优雅 */
+.metadata-container {
+  border: 2px dashed rgba(139, 90, 43, 0.35) !important;
+  background: rgba(255, 241, 200, 0.45) !important;
+  border-radius: 0 !important;
+}
+
+/* 选中高亮 */
+::selection {
+  background: rgba(246, 211, 101, 0.55);
+  color: var(--rl-ink);
+}

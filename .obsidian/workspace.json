@@ -1,24 +1,20 @@
 {
   "main": {
-    "id": "main",
+    "id": "77dd8c9f02d0bd9d",
     "type": "split",
     "children": [
       {
-        "id": "c5b032241e1a86ca",
+        "id": "b01d89727d048f36",
         "type": "tabs",
         "children": [
           {
-            "id": "editor-leaf",
+            "id": "d8d2e8c8b5bd0033",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_posts/思.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "思"
+              "title": "新标签页"
             }
           }
         ]
@@ -27,15 +23,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "left",
+    "id": "463ff5519b4f8d17",
     "type": "split",
     "children": [
       {
-        "id": "left-tabs",
+        "id": "bb5a4136def2dd4d",
         "type": "tabs",
         "children": [
           {
-            "id": "file-explorer",
+            "id": "2fb4834a8a4f7732",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -50,7 +46,7 @@
             }
           },
           {
-            "id": "search",
+            "id": "5db76ee55129b1f2",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -67,7 +63,7 @@
             }
           },
           {
-            "id": "61c732999a48f617",
+            "id": "0b88f1f4f91331f4",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -86,35 +82,19 @@
     "width": 300
   },
   "right": {
-    "id": "right",
+    "id": "8b15617463ef3a8c",
     "type": "split",
     "children": [
       {
-        "id": "right-tabs",
+        "id": "4fbd227e7be9d10e",
         "type": "tabs",
         "children": [
           {
-            "id": "outline",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "_posts/思.md",
-                "followCursor": false,
-                "showSearch": false,
-                "searchQuery": ""
-              },
-              "icon": "lucide-list",
-              "title": "大纲"
-            }
-          },
-          {
-            "id": "2b95e4d34088592b",
+            "id": "062d10d5ec630739",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/思.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -128,12 +108,11 @@
             }
           },
           {
-            "id": "a66f00224eff198f",
+            "id": "5ecfa8aaf5bb2e1d",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/思.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -142,7 +121,7 @@
             }
           },
           {
-            "id": "88a4b537e29b5d82",
+            "id": "2ba7e865bec70fbf",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -157,7 +136,7 @@
             }
           },
           {
-            "id": "ecccaa7af743b823",
+            "id": "d8866a02b62bce7c",
             "type": "leaf",
             "state": {
               "type": "all-properties",
@@ -168,6 +147,20 @@
               },
               "icon": "lucide-archive",
               "title": "添加笔记属性"
+            }
+          },
+          {
+            "id": "60f3925f8c2007c4",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "大纲"
             }
           }
         ]
@@ -182,18 +175,12 @@
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
-      "markdown-importer:打开 Markdown 格式转换器": false,
       "bases:新建数据库": false
     }
   },
-  "active": "editor-leaf",
-  "lastOpenFiles": [
-    "_posts/中秋随想.md",
-    "_posts/网络安全内网渗透全链路学习指南.md",
-    "_posts/星露谷物品代码前缀速查.md",
-    "_templates/hexo-文章.md",
-    "about/index.md"
-  ]
+  "active": "d8d2e8c8b5bd0033",
+  "lastOpenFiles": []
 }
