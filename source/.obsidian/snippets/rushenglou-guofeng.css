@@ -222,29 +222,113 @@ body,
   background: #141722 !important;
 }
 
-/* 顶栏 / 状态栏：白字 */
+/* 顶栏 / 状态栏：强制白字（修复左上角标题看不见） */
 .titlebar,
 .titlebar-inner,
-.titlebar-text,
-.status-bar,
-.status-bar-item {
+.workspace .titlebar,
+body > .titlebar {
   background: #1f2435 !important;
   color: #ffffff !important;
+}
+
+.titlebar *,
+.titlebar-text,
+.titlebar-button,
+.titlebar-button .svg-icon,
+.titlebar .clickable-icon,
+.titlebar .clickable-icon .svg-icon,
+.titlebar-inner,
+.titlebar-inner * {
+  color: #ffffff !important;
+  fill: #ffffff !important;
+  stroke: #ffffff !important;
   opacity: 1 !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+.status-bar,
+.status-bar-item,
+.status-bar * {
+  background: #1f2435 !important;
+  color: #ffffff !important;
+  fill: #ffffff !important;
+  opacity: 1 !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+/* Windows 自定义标题栏 / 保险写法 */
+.is-hidden-frameless .titlebar,
+.is-frameless .titlebar,
+.titlebar-button-container,
+.titlebar-button-container.mod-left,
+.titlebar-button-container.mod-right {
+  background: #1f2435 !important;
+  color: #ffffff !important;
+}
+
+.titlebar-button-container.mod-left *,
+.titlebar-button-container.mod-right * {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
 }
 
 .view-header,
 .view-header-title,
 .view-action,
-.view-header-icon {
+.view-header-icon,
+.view-header .clickable-icon,
+.view-header .clickable-icon .svg-icon {
   color: #1a1a1f !important;
+  stroke: #1a1a1f !important;
+  fill: currentColor !important;
   opacity: 1 !important;
+  -webkit-text-fill-color: #1a1a1f !important;
 }
 
 .theme-dark .view-header,
 .theme-dark .view-header-title,
-.theme-dark .view-action {
+.theme-dark .view-action,
+.theme-dark .view-header .clickable-icon {
   color: #f5f0e6 !important;
+  -webkit-text-fill-color: #f5f0e6 !important;
+}
+
+/* 左侧栏顶部按钮 / 空状态「找不到路径」 */
+.nav-header,
+.nav-header .clickable-icon,
+.nav-header .clickable-icon .svg-icon,
+.workspace-leaf-content[data-type="file-explorer"] .clickable-icon,
+.workspace-leaf-content[data-type="file-explorer"] .svg-icon {
+  color: #1a1a1f !important;
+  stroke: #1a1a1f !important;
+  opacity: 1 !important;
+}
+
+.empty-state,
+.empty-state-title,
+.empty-state-action,
+.empty-state-container,
+.workspace-leaf-content .empty-state,
+.workspace-leaf-content .empty-state-title {
+  color: #1a1a1f !important;
+  -webkit-text-fill-color: #1a1a1f !important;
+  opacity: 1 !important;
+}
+
+.theme-dark .empty-state,
+.theme-dark .empty-state-title {
+  color: #f5f0e6 !important;
+  -webkit-text-fill-color: #f5f0e6 !important;
+}
+
+/* 仓库名 / 侧栏档案条 */
+.workspace-sidedock-vault-profile,
+.workspace-sidedock-vault-profile *,
+.workspace-drawer-vault-switcher,
+.workspace-drawer-vault-switcher * {
+  color: #1a1a1f !important;
+  -webkit-text-fill-color: #1a1a1f !important;
+  opacity: 1 !important;
 }
 
 /* 编辑区：实底宣纸 + 深字 */

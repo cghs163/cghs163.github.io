@@ -1,14 +1,24 @@
 {
   "alwaysUpdateLinks": true,
   "newFileLocation": "folder",
-  "newFileFolderPath": "source/_posts",
-  "attachmentFolderPath": "source/img/library",
+  "newFileFolderPath": "_posts",
+  "attachmentFolderPath": "img/library",
   "showLineNumber": false,
   "strictLineBreaks": false,
   "useMarkdownLinks": false,
-  "showUnsupportedFiles": true,
+  "showUnsupportedFiles": false,
   "userRelativePath": true,
   "spellcheck": false,
-  "readableLineLength": false,
-  "foldIndent": true
+  "readableLineLength": true,
+  "foldIndent": true,
+  "userIgnoreFilters": [
+    "css/",
+    "CNAME",
+    "favicon\\.ico",
+    "\\.obsidian/",
+    "img/library/\\.gitkeep"
+  ],
+  "promptDelete": false,
+  "trashOption": "local",
+  "translucency": false
 }
