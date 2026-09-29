@@ -10,6 +10,7 @@ categories:
   - 安全学习
 index_img: /img/edr-architecture-explained.png
 banner_img: /img/edr-architecture-explained.png
+mermaid: true
 ---
 
 如果你听到「EDR」就觉得像黑盒：装了一个 Agent，然后安全团队就知道电脑上发生了什么——这篇文章会把它拆开讲清楚：**它是什么、为什么会出现、内部怎么采数据、怎么判定恶意、怎么响应**，以及和杀毒、XDR 有何不同。
@@ -84,26 +85,26 @@ XDR 偏「不只看这一台电脑，而是看整条攻击链路上的多个传�
 
 把任意主流 EDR 抽象成五层，你就能看懂绝大多数产品说明书：
 
-```mermaid
+{% mermaid %}
 flowchart TB
-  subgraph EP[端点 Endpoint]
-    S[传感器 Sensors<br/>驱动 / ETW / Hook / 过滤器]
-    A[本地 Agent<br/>缓冲、初步规则、防护动作]
+  subgraph EP["端点 Endpoint"]
+    S["传感器 Sensors<br/>驱动 / ETW / Hook / 过滤器"]
+    A["本地 Agent<br/>缓冲、初步规则、防护动作"]
   end
-  subgraph PIPE[遥测管道]
-    T[加密上报 / 本地缓存 / 断网补传]
+  subgraph PIPE["遥测管道"]
+    T["加密上报 / 本地缓存 / 断网补传"]
   end
-  subgraph CTR[控制面 Control Plane]
-    N[归一化与富化]
-    D[检测引擎<br/>规则 / ML / 威胁情报]
-    C[控制台 Console]
+  subgraph CTR["控制面 Control Plane"]
+    N["归一化与富化"]
+    D["检测引擎<br/>规则 / ML / 威胁情报"]
+    C["控制台 Console"]
   end
-  subgraph SOC[安全运营]
-    H[告警分诊 / 威胁狩猎 / 响应手册]
+  subgraph SOC["安全运营"]
+    H["告警分诊 / 威胁狩猎 / 响应手册"]
   end
   S --> A --> T --> N --> D --> C --> H
   H -->|隔离/杀进程/远程调查| A
-```
+{% endmermaid %}
 
 ### 4.1 传感器（Sensors）：眼睛和耳朵
 
@@ -321,14 +322,14 @@ CrowdStrike 等厂商公开材料强调：EDR 记录端点与工作负载上的�
 
 光装 Agent 不等于有 EDR 能力。建议最小运营闭环：
 
-```mermaid
+{% mermaid %}
 flowchart LR
-  A[覆盖率达标] --> B[告警分诊 SLA]
-  B --> C[调查手册]
-  C --> D[遏制与修复]
-  D --> E[规则调优与狩猎]
+  A["覆盖率达标"] --> B["告警分诊 SLA"]
+  B --> C["调查手册"]
+  C --> D["遏制与修复"]
+  D --> E["规则调优与狩猎"]
   E --> B
-```
+{% endmermaid %}
 
 1. **覆盖率**：关键资产必须在线、版本一致  
 2. **分诊**：按严重度设响应时限，减少告警疲劳  
